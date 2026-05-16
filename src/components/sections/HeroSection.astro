@@ -1,0 +1,38 @@
+---
+import { CONTACT } from '../../lib/constants';
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-lighter via-white to-accent/10">
+  <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+  <div class="relative container-main pt-24 pb-16 md:pt-32 md:pb-24">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-6">
+          <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>{{HERO_BADGE}}
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-dark leading-[1.1] mb-6">{{HERO_LINE_1}}<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">{{HERO_LINE_2}}</span></h1>
+        <p class="text-lg md:text-xl text-gray-500 max-w-xl mx-auto lg:mx-0 mb-8">{{HERO_SUB}}</p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+          <a href={`${CONTACT.whatsappLink}?text=${encodeURIComponent('Ola! Vi o site e quero saber mais!')}`} target="_blank" rel="noopener noreferrer" class="btn-primary text-lg !px-10 !py-4">Ver Colecao</a>
+          <a href="#colecao" class="btn-secondary text-lg !px-10 !py-4">Explorar</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="relative w-full max-w-lg mx-auto">
+          <div class="rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 aspect-[3/4] bg-gradient-to-br from-primary-lighter via-primary-light to-accent">
+            <div class="absolute inset-0 flex items-center justify-center text-center p-8">
+              <div>
+                <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-white/30 backdrop-blur flex items-center justify-center">
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </div>
+                <p class="text-white font-heading text-2xl font-semibold">{{STORE_NAME_LOGO}}</p>
+                <p class="text-white/70 text-sm mt-2">{{STORE_TYPE}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
