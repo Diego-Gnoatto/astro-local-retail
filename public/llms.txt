@@ -1,0 +1,13 @@
+# {{STORE_NAME}}
+
+## About
+{{STORE_DESCRIPTION}}
+
+## Categories
+{{CATEGORIES_LIST}}
+
+## Contact
+Phone: {{PHONE_FORMATTED}}
+Email: {{EMAIL}}
+Address: {{FULL_ADDRESS}}
+Instagram: @{{INSTAGRAM_HANDLE}}
