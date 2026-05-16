@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE, CONTACT, OWNER, COMPANY, CATEGORIES, DIFFERENTIALS, FAQ } from '../lib/constants';
+import { generateTitle, generateStoreSchema, generateFAQSchema } from '../lib/seo';
+import HeroSection from '../components/sections/HeroSection.astro';
+import ColecaoSection from '../components/sections/ColecaoSection.astro';
+import DiferenciaisSection from '../components/sections/DiferenciaisSection.astro';
+import SobreSection from '../components/sections/SobreSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
+
+const title = generateTitle('{{HOMEPAGE_TITLE}}');
+const schema = generateStoreSchema();
+const faqSchema = generateFAQSchema(FAQ);
+---
+
+<Layout title={title} schema={schema}>
+  <HeroSection />
+  <ColecaoSection />
+  <DiferenciaisSection />
+  <SobreSection />
+  <CTASection />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} is:inline />
+</Layout>
